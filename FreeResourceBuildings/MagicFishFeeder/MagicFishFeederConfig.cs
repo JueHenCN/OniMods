@@ -13,9 +13,9 @@ namespace FreeResourceBuildings
     public class MagicFishFeederConfig : IBuildingConfig
     {
         public const string ID = ModStrings.MagicFishFeederID;
-        public const string Name = ModStrings.MagicFishFeederName;
-        public const string Description = ModStrings.MagicFishFeederDescription;
-        public const string Effect = ModStrings.MagicFishFeederEffect;
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
         public override BuildingDef CreateBuildingDef()
         {

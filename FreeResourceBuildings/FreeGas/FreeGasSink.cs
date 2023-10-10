@@ -13,11 +13,11 @@ namespace FreeResourceBuildings
 	public class FreeGasSinkConfig : IBuildingConfig
 	{
 		public const string ID = ModStrings.FreeGasSinkID;
-		public const string Name = ModStrings.FreeGasSinkName;
-		public const string Description = ModStrings.FreeGasSinkDescription;
-		public const string Effect = ModStrings.FreeGasSinkEffect;
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
-		public override BuildingDef CreateBuildingDef()
+        public override BuildingDef CreateBuildingDef()
 		{
 			var options = ModBuildingDefs.Instance.GetDefaultOptions(
 			  TUNING.BUILDINGS.CONSTRUCTION_MASS_KG.TIER2,

@@ -13,11 +13,11 @@ namespace FreeResourceBuildings
 	public class FreeLiquidSinkConfig : IBuildingConfig
 	{
 		public const string ID = ModStrings.FreeLiquidSinkID;
-		public const string Name = ModStrings.FreeLiquidSinkName;
-		public const string Description = ModStrings.FreeLiquidSinkDescription;
-		public const string Effect = ModStrings.FreeLiquidSinkEffect;
-		
-		public override BuildingDef CreateBuildingDef()
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
+
+        public override BuildingDef CreateBuildingDef()
 		{
 			var options = ModBuildingDefs.Instance.GetDefaultOptions(
 		  TUNING.BUILDINGS.CONSTRUCTION_MASS_KG.TIER2,

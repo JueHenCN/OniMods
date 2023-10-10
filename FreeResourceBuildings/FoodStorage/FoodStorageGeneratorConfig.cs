@@ -12,11 +12,11 @@ namespace FreeResourceBuildings
 	public class FoodStorageGeneratorConfig : IBuildingConfig
 	{
 		public static string ID = ModStrings.FoodStorageGeneratorID;
-		public static string Name = ModStrings.FoodStorageGeneratorName;
-		public static string Description = ModStrings.FoodStorageGeneratorDescription;
-		public static string Effect = ModStrings.FoodStorageGeneratorEffect;
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
-		public override BuildingDef CreateBuildingDef()
+        public override BuildingDef CreateBuildingDef()
 		{
 			var options = ModBuildingDefs.Instance.GetDefaultOptions(
 				BUILDINGS.CONSTRUCTION_MASS_KG.TIER2,

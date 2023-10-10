@@ -12,9 +12,9 @@ namespace FreeResourceBuildings
 	public class FarmerStorageConfig : IBuildingConfig
 	{
 		public static string ID = ModStrings.FarmerStorageID;
-		public static string Name = ModStrings.FarmerStorageName;
-		public static string Description = ModStrings.FarmerStorageDescription;
-		public static string Effect = ModStrings.FarmerStorageEffect;
+		public static string Name = ModTextString.GetModStrings(ID).Name;
+		public static string Description = ModTextString.GetModStrings(ID).Description;
+		public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
 		public override BuildingDef CreateBuildingDef()
 		{

@@ -12,11 +12,11 @@ namespace FreeResourceBuildings
 	public class FirstAidBoxConfig : IBuildingConfig
 	{
 		public static string ID = ModStrings.FirstAidBoxID;
-		public static string Name = ModStrings.FirstAidBoxName;
-		public static string Description = ModStrings.FirstAidBoxDescription;
-		public static string Effect = ModStrings.FirstAidBoxEffect;
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
-		public override BuildingDef CreateBuildingDef()
+        public override BuildingDef CreateBuildingDef()
 		{
 
 			var options = ModBuildingDefs.Instance.GetDefaultOptions(

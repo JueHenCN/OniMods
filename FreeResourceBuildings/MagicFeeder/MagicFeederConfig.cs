@@ -12,11 +12,11 @@ namespace FreeResourceBuildings
 	public class MagicFeederConfig : IBuildingConfig
 	{
 		public const string ID = ModStrings.MagicFeederID;
-		public const string Name = ModStrings.MagicFeederName;
-		public const string Description = ModStrings.MagicFeederDescription;
-		public const string Effect = ModStrings.MagicFeederEffect;
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
-		public override BuildingDef CreateBuildingDef()
+        public override BuildingDef CreateBuildingDef()
 		{
 			var options = ModBuildingDefs.Instance.GetDefaultOptions(
 			  TUNING.BUILDINGS.CONSTRUCTION_MASS_KG.TIER3,

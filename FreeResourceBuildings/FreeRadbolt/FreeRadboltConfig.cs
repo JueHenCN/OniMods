@@ -10,11 +10,11 @@ namespace FreeResourceBuildings
 	internal class FreeRadboltConfig : IBuildingConfig
 	{
 		public const string ID = ModStrings.FreeRadboltID;
-		public const string Name = ModStrings.FreeRadboltName;
-		public const string Description = ModStrings.FreeRadboltDescription;
-		public const string Effect = ModStrings.FreeRadboltEffect;
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
-		public override BuildingDef CreateBuildingDef()
+        public override BuildingDef CreateBuildingDef()
 		{
 			var options = ModBuildingDefs.Instance.GetDefaultOptions(
 			  TUNING.BUILDINGS.CONSTRUCTION_MASS_KG.TIER2,

@@ -15,9 +15,9 @@ namespace FreeResourceBuildings
 	{
 
 		public static string ID = ModStrings.FreeEnergyGeneratorID;
-		public static string Name = ModStrings.FreeEnergyGeneratorName;
-		public static string Description = ModStrings.FreeEnergyGeneratorDescription;
-		public static string Effect = ModStrings.FreeEnergyGeneratorEffect;
+		public static string Name = ModTextString.GetModStrings(ID).Name;
+		public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
 		private HandleVector<int>.Handle structureTemperature;
 

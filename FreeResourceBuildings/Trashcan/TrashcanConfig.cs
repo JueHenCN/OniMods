@@ -11,11 +11,11 @@ namespace FreeResourceBuildings
 	public class TrashcanConfig : IBuildingConfig
 	{
 		public static string ID = ModStrings.TrashcanID;
-		public static string Name = ModStrings.TrashcanName;
-		public static string Description = ModStrings.TrashcanDescription;
-		public static string Effect = ModStrings.TrashcanEffect;
+        public static string Name = ModTextString.GetModStrings(ID).Name;
+        public static string Description = ModTextString.GetModStrings(ID).Description;
+        public static string Effect = ModTextString.GetModStrings(ID).Effect;
 
-		public override BuildingDef CreateBuildingDef()
+        public override BuildingDef CreateBuildingDef()
 		{
 			var options = ModBuildingDefs.Instance.GetDefaultOptions(
 			TUNING.BUILDINGS.CONSTRUCTION_MASS_KG.TIER2,
