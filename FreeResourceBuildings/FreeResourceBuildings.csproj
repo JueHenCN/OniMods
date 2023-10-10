@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\ILRepack.2.0.18\build\ILRepack.props" Condition="Exists('..\packages\ILRepack.2.0.18\build\ILRepack.props')" />
+  <Import Project="packages\ILRepack.2.0.18\build\ILRepack.props" Condition="Exists('packages\ILRepack.2.0.18\build\ILRepack.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D69838EF-B9D3-4A64-92E7-2DCDF02C85CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreeResourceBuildings</RootNamespace>
+    <AssemblyName>FreeResourceBuildings</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\Lib\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\Lib\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\Lib\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PLib, Version=4.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PLib.4.13.0\lib\net471\PLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\Lib\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\Lib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\Lib\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FirstAidBox\FirstAidBox.cs" />
+    <Compile Include="FreeLiquid\FreeSourceLiquid.cs" />
+    <Compile Include="MagicFishFeeder\MagicFishFeeder.cs" />
+    <Compile Include="MagicFishFeeder\MagicFishFeederConfig.cs" />
+    <Compile Include="ModBuildingDefs.cs" />
+    <Compile Include="ModConfig.cs" />
+    <Compile Include="FreeRadbolt\RadBoltSilder.cs" />
+    <Compile Include="FlowSlider.cs" />
+    <Compile Include="FoodStorage\FoodStorageGenerator.cs" />
+    <Compile Include="FarmerStorage\FarmerStorage.cs" />
+    <Compile Include="FreeRadbolt\FreeRadbolt.cs" />
+    <Compile Include="FreeRadbolt\FreeRadboltConfig.cs" />
+    <Compile Include="MagicFeeder\MagicFeeder.cs" />
+    <Compile Include="MagicFeeder\MagicFeederConfig.cs" />
+    <Compile Include="Wardobre\Wardobre.cs" />
+    <Compile Include="FirstAidBox\FirstAidBoxConfig.cs" />
+    <Compile Include="FarmerStorage\FarmerStorageConfig.cs" />
+    <Compile Include="Wardobre\WardobreConfig.cs" />
+    <Compile Include="FreeGas\FreeGasSink.cs" />
+    <Compile Include="FreeGas\FreeGasSourceConfig.cs" />
+    <Compile Include="FreeLiquid\FreeLiquidSink.cs" />
+    <Compile Include="FreeLiquid\FreeLiquidSourceConfig.cs" />
+    <Compile Include="FreeSink.cs" />
+    <Compile Include="FreeSource.cs" />
+    <Compile Include="FreeStorage.cs" />
+    <Compile Include="Trashcan\TrashcanConfig.cs" />
+    <Compile Include="Trashcan\Trashcan.cs" />
+    <Compile Include="StorageGenerator\StorageGenerator.cs" />
+    <Compile Include="FoodStorage\FoodStorageGeneratorConfig.cs" />
+    <Compile Include="StorageGenerator\StorageGeneratorConfig.cs" />
+    <Compile Include="FreeEnergyGenerator\FreeEnergyGenerator.cs" />
+    <Compile Include="FreeEnergyGenerator\FreeEnergyGeneratorConfig.cs" />
+    <Compile Include="ModPatches.cs" />
+    <Compile Include="ModStrings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemperatureSlider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILRepack.2.0.18\build\ILRepack.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILRepack.2.0.18\build\ILRepack.props'))" />
+  </Target>
+</Project>
