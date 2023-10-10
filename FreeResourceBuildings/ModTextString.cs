@@ -31,6 +31,15 @@ namespace FreeResourceBuildings
                     case Localization.Language.Chinese:
                         languageFileName += "zh_CN.Json";
                         break;
+                    case Localization.Language.Japanese:
+                        languageFileName += "ja.Json";
+                        break;
+                    case Localization.Language.Korean:
+                        languageFileName += "ko.Json";
+                        break;
+                    case Localization.Language.Russian:
+                        languageFileName += "ru.Json";
+                        break;
                     default:
                         languageFileName += "en.Json";
                         break;
