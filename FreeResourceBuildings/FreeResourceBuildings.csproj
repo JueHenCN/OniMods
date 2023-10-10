@@ -88,6 +88,7 @@
     <Compile Include="FreeRadbolt\FreeRadboltConfig.cs" />
     <Compile Include="MagicFeeder\MagicFeeder.cs" />
     <Compile Include="MagicFeeder\MagicFeederConfig.cs" />
+    <Compile Include="ModTextString.cs" />
     <Compile Include="Wardobre\Wardobre.cs" />
     <Compile Include="FirstAidBox\FirstAidBoxConfig.cs" />
     <Compile Include="FarmerStorage\FarmerStorageConfig.cs" />
