@@ -23,36 +23,41 @@ namespace FreeResourceBuildings
         {
             try
             {
-                var lang = Localization.GetLocale().Lang;
+                var local = Localization.GetLocale();
+                var lang = Localization.Language.Unspecified;
+                if (null != local)
+                {
+                    lang = local.Lang;
+                }
                 string modFolderPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
                 string languageFileName = "";
                 switch (lang)
                 {
                     case Localization.Language.Chinese:
-                        languageFileName += "zh_CN.Json";
+                        languageFileName += "zh_CN.json";
                         break;
                     case Localization.Language.Japanese:
-                        languageFileName += "ja.Json";
+                        languageFileName += "ja.json";
                         break;
                     case Localization.Language.Korean:
-                        languageFileName += "ko.Json";
+                        languageFileName += "ko.json";
                         break;
                     case Localization.Language.Russian:
-                        languageFileName += "ru.Json";
+                        languageFileName += "ru.json";
                         break;
                     default:
-                        languageFileName += "en.Json";
+                        languageFileName += "en.json";
                         break;
                 }
-
                 string filePath = System.IO.Path.Combine(modFolderPath, "Language");
                 string languageFile = System.IO.Path.Combine(filePath, languageFileName);
-                string json = System.IO.File.ReadAllText(languageFile);
-                ModItemInfos = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ItemInfo>>(json);
+                string jsonString = System.IO.File.ReadAllText(languageFile);
+                ModItemInfos = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ItemInfo>>(jsonString);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Debug.LogError($"读取语言文件失败:{e.Message}");
+                Debug.LogError($"语言文件读取异常:{ex}");
             }
         }
     }
